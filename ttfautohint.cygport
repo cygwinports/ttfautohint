@@ -1,7 +1,7 @@
 inherit qt4
 
 NAME="ttfautohint"
-VERSION=1.5
+VERSION=1.6
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Automated hinter for TTF fonts"
