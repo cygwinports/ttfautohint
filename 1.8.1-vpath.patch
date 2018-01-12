@@ -1,0 +1,12 @@
+--- origsrc/ttfautohint-1.8.1/frontend/Makefile.am	2017-12-22 15:39:13.000000000 -0600
++++ src/ttfautohint-1.8.1/frontend/Makefile.am	2018-01-12 03:09:25.881594300 -0600
+@@ -27,7 +27,8 @@ moc_verbose_0 = @echo "  MOC     " $@;
+ 
+ DISTCLEANFILES = $(BUILT_SOURCES)
+ 
+-AM_CPPFLAGS = -I$(top_srcdir)/lib \
++AM_CPPFLAGS = -I$(top_builddir)/lib \
++              -I$(top_srcdir)/lib \
+               -I$(top_builddir)/gnulib/src \
+               -I$(top_srcdir)/gnulib/src \
+               $(FREETYPE_CPPFLAGS)

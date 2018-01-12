@@ -1,7 +1,7 @@
 inherit qt4
 
 NAME="ttfautohint"
-VERSION=1.6
+VERSION=1.8.1
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Automated hinter for TTF fonts"
@@ -10,9 +10,18 @@ platform for finely hand-hinting the last 1%. It is ideal for web fonts and
 supports many scripts."
 HOMEPAGE="http://www.freetype.org/ttfautohint/"
 SRC_URI="http://download.savannah.gnu.org/releases/freetype/ttfautohint-${VERSION}.tar.gz"
+PATCH_URI="1.8.1-vpath.patch"
 
-PKG_NAMES="${NAME} ${NAME}-gui"
+PKG_NAMES="${NAME} ${NAME}-gui lib${NAME}1 lib${NAME}-devel"
 ttfautohint_DOCS="AUTHORS COPYING ChangeLog NEWS README THANKS TODO *.TXT doc/*.txt"
 ttfautohint_CONTENTS="usr/bin/ttfautohint.exe"
 ttfautohint_gui_DOCS=${ttfautohint_DOCS/txt/pdf}
 ttfautohint_gui_CONTENTS="usr/bin/ttfautohintGUI.exe"
+libttfautohint1_CATEGORY="Libs"
+libttfautohint1_CONTENTS="usr/bin/cygttfautohint-1.dll"
+libttfautohint_devel_CATEGORY="Libs"
+libttfautohint_devel_CONTENTS="
+	usr/include/ttfautohint*.h
+	usr/lib/libttfautohint.dll.a
+	usr/lib/pkgconfig/ttfautohint.pc
+"
