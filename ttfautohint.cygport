@@ -1,8 +1,8 @@
-inherit qt4
+inherit qt5
 
 NAME="ttfautohint"
 VERSION=1.8.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Graphics"
 SUMMARY="Automated hinter for TTF fonts"
 DESCRIPTION="ttfautohint provides a 99% automated hinting process and a
